@@ -1,0 +1,8 @@
+C:\Build\TSGames\TSGames.Tests\bin\Debug\TSGames.Tests.dll.config
+C:\Build\TSGames\TSGames.Tests\bin\Debug\TSGames.Tests.dll
+C:\Build\TSGames\TSGames.Tests\bin\Debug\TSGames.Tests.pdb
+C:\Build\TSGames\TSGames.Tests\bin\Debug\TSGames.dll
+C:\Build\TSGames\TSGames.Tests\bin\Debug\TSGames.pdb
+C:\Build\TSGames\TSGames.Tests\obj\Debug\ResolveAssemblyReference.cache
+C:\Build\TSGames\TSGames.Tests\obj\Debug\TSGames.Tests.dll
+C:\Build\TSGames\TSGames.Tests\obj\Debug\TSGames.Tests.pdb

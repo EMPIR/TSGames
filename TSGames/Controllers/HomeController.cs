@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using SetGame;
 
 namespace TSGames.Controllers
 {
@@ -11,9 +12,9 @@ namespace TSGames.Controllers
     {
         public ActionResult Index()
         {
-            ViewData["Message"] = "Welcome to ASP.NET MVC!";
-
-            return View();
+            ViewData["Message"] = "Hey!  We are making a Set Game and if you don't like it get the f' out!~";
+            SetGame.Game g = new Game();
+            return View(g);
         }
 
         public ActionResult About()
