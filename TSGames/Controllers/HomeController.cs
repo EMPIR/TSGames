@@ -21,5 +21,11 @@ namespace TSGames.Controllers
         {
             return View();
         }
+
+        public void OnClick1()
+        {
+            int debug = 0;
+           
+        }
     }
 }

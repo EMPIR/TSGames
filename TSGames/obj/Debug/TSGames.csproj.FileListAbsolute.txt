@@ -3,3 +3,5 @@ C:\Build\TSGames\TSGames\bin\TSGames.pdb
 C:\Build\TSGames\TSGames\obj\Debug\ResolveAssemblyReference.cache
 C:\Build\TSGames\TSGames\obj\Debug\TSGames.dll
 C:\Build\TSGames\TSGames\obj\Debug\TSGames.pdb
+C:\Build\TSGames\TSGames\bin\TSGames.GameLogic.dll
+C:\Build\TSGames\TSGames\bin\TSGames.GameLogic.pdb

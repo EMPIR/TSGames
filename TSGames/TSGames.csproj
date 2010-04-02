@@ -65,6 +65,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\SetGame.cs" />
+    <Compile Include="Models\SetLogic.cs" />
     <Compile Include="Models\SetPiece.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -95,6 +96,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TSGames.GameLogic\TSGames.GameLogic.csproj">
+      <Project>{A17DEC3A-2231-42DA-BD5B-62CDFA9A0A19}</Project>
+      <Name>TSGames.GameLogic</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

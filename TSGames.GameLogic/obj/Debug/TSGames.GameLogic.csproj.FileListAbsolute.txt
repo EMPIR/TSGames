@@ -1,0 +1,5 @@
+C:\Build\TSGames\TSGames.GameLogic\bin\Debug\TSGames.GameLogic.dll
+C:\Build\TSGames\TSGames.GameLogic\bin\Debug\TSGames.GameLogic.pdb
+C:\Build\TSGames\TSGames.GameLogic\obj\Debug\ResolveAssemblyReference.cache
+C:\Build\TSGames\TSGames.GameLogic\obj\Debug\TSGames.GameLogic.dll
+C:\Build\TSGames\TSGames.GameLogic\obj\Debug\TSGames.GameLogic.pdb

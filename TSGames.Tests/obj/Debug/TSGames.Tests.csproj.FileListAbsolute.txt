@@ -6,3 +6,5 @@ C:\Build\TSGames\TSGames.Tests\bin\Debug\TSGames.pdb
 C:\Build\TSGames\TSGames.Tests\obj\Debug\ResolveAssemblyReference.cache
 C:\Build\TSGames\TSGames.Tests\obj\Debug\TSGames.Tests.dll
 C:\Build\TSGames\TSGames.Tests\obj\Debug\TSGames.Tests.pdb
+C:\Build\TSGames\TSGames.Tests\bin\Debug\TSGames.GameLogic.dll
+C:\Build\TSGames\TSGames.Tests\bin\Debug\TSGames.GameLogic.pdb
