@@ -7,14 +7,18 @@ using SetGame;
 
 namespace TSGames.Controllers
 {
+
     [HandleError]
     public class HomeController : Controller
     {
+
+
+        SetGame.Game theGame;
         public ActionResult Index()
         {
-            ViewData["Message"] = "Hey!  We are making a Set Game and if you don't like it get the f' out!~";
-            SetGame.Game g = new Game();
-            return View(g);
+            this.ControllerContext.HttpContext.Session.Add("__MySessionGame", new SetGame.Game());
+            theGame = (SetGame.Game) this.ControllerContext.HttpContext.Session["__MySessionGame"];
+            return View(theGame);
         }
 
         public ActionResult About()
@@ -22,10 +26,28 @@ namespace TSGames.Controllers
             return View();
         }
 
-        public void OnClick1()
+        public void TestJavaScript()
         {
-            int debug = 0;
+            string s = "$('#divResultText').html('JavaScript Passed');";
            
         }
+
+        [OutputCache(NoStore = true, Duration = 0, VaryByParam = "*")]
+        public JsonResult NodeClicked(int a, int b, int c)
+        {
+            //string id = ReadFromRequest("id");
+            theGame = (SetGame.Game) this.ControllerContext.HttpContext.Session["__MySessionGame"];
+            
+            
+            //string json = JavaScriptConvert.SerializeObject(node);
+            return this.Json(this.theGame.Move(a,b,c));
+            
+        }
+
+
+
+
+
+
     }
 }

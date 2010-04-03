@@ -1,14 +1,20 @@
 ﻿using TSGames.GameLogic;
 using System.Collections.Generic;
 
+
 namespace SetGame
 {
     public class SetLogic
     {
 #region public constructor
+
+
         public SetLogic()
         {
         }
+
+
+        
 
         /// <summary>
         /// Creates a Set Piece with Random color, number, shape, fill
@@ -117,7 +123,7 @@ namespace SetGame
         /// </summary>
         /// <param name="pieces"></param>
         /// <returns></returns>
-        public static List<int> ContainsMatch(List<SetPiece> pieces)
+        public static List<int> ContainsMatch(List<SetPiece> pieces, List<int> state)
         {
             List<int> ret = new List<int>();
             if (pieces.Count < 3)
@@ -136,17 +142,17 @@ namespace SetGame
             int r2; //runner 2
 
 
-            for(p1 = 0; p1 < pieces.Count - 2; ++p1)
+            for(p1 = 0; p1 < state.Count - 2; ++p1)
             {
-                for (r1 = p1 + 1; r1 < pieces.Count - 1; ++r1)
+                for (r1 = p1 + 1; r1 < state.Count - 1; ++r1)
                 {
-                    for(r2 = r1 + 1; r2 < pieces.Count; ++r2)
+                    for(r2 = r1 + 1; r2 < state.Count; ++r2)
                     {
-                        if (ContainsMatch(pieces[p1], pieces[r1], pieces[r2]))
+                        if (ContainsMatch(pieces[state[p1]], pieces[state[r1]], pieces[state[r2]]))
                         {
-                            ret.Add(p1);
-                            ret.Add(r1);
-                            ret.Add(r2);
+                            ret.Add(state[p1]);
+                            ret.Add(state[r1]);
+                            ret.Add(state[r2]);
 
 
                             return ret;
@@ -208,5 +214,46 @@ namespace SetGame
 
 #endregion
 
+
+        public static List<SetPiece> CreatePieces()
+        {
+            List<SetPiece> m_p = new List<SetPiece>();
+
+            for (int i = 1; i <= 3; ++i)
+            {
+                for (int j = 1; j <= 3; ++j)
+                {
+                    for (int k = 1; k <= 3; ++k)
+                    {
+                        for (int l = 1; l <= 3; ++l)
+                        {
+                            string urlstr = "/Images/Pieces/"+i + j + k + l+".jpg";
+                            m_p.Add(new SetPiece(i, j, k, l, urlstr));
+                        }
+                    }
+                }
+            }
+            return m_p;
+            
+        }
+
+        public static List<int> CreateState()
+        {
+            List<int> list = new List<int>();
+            list.Add(GameLogic.RandomNumber(0, 80));
+            list.Add(GameLogic.RandomNumber(0, 80));
+            list.Add(GameLogic.RandomNumber(0, 80));
+            list.Add(GameLogic.RandomNumber(0, 80));
+            list.Add(GameLogic.RandomNumber(0, 80));
+            list.Add(GameLogic.RandomNumber(0, 80));
+            list.Add(GameLogic.RandomNumber(0, 80));
+            list.Add(GameLogic.RandomNumber(0, 80));
+            list.Add(GameLogic.RandomNumber(0, 80));
+            list.Add(GameLogic.RandomNumber(0, 80));
+            list.Add(GameLogic.RandomNumber(0, 80));
+            list.Add(GameLogic.RandomNumber(0, 80));
+            return list;
+
+        }
     }
 }

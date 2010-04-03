@@ -22,11 +22,26 @@ namespace TSGames
                 new { controller = "Home", action = "Index", id = "" }  // Parameter defaults
             );
 
+            routes.MapRoute(
+                "postcode",
+                "Home/NodeClicked/{a}/{b}/{c}",
+                new { controller = "Home", action = "NodeClicked", a = 0, b = 0,c=0 });
+
+
         }
 
         protected void Application_Start()
         {
             RegisterRoutes(RouteTable.Routes);
+           
         }
+
+        protected void Session_Start(Object sender, EventArgs e)
+
+        {
+           
+        }
+
+
     }
 }

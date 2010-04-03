@@ -39,17 +39,31 @@
         private int m_shape;
         private int m_number;
         private int m_index;
+        private string m_url;
 #endregion
 
 #region public constructor
         public SetPiece()
         {
         }
+
+        public SetPiece(int shape, int color, int fill, int number, string url)
+        {
+            Shape = shape;
+            Color = color;
+            Fill = fill;
+            Number = number;
+            URL = url;
+        }
 #endregion
 
 #region public member functions
 
-
+        public string URL
+        {
+            get { return m_url; }
+            set { m_url = value; }
+        }
 
         public override bool Equals(System.Object obj)
         {
